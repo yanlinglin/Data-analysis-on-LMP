@@ -6,6 +6,19 @@ Since the liberalization of the U.S. market, most U.S. electric markets adopt th
 
 True to its name, LMP is location-dependent. It is also influenced by demand, renewable energy generation, transmission congestion, prices of fuel, generator outage, etc. LMP is not only the energy price for transactions but also a critical index for the decision-making of the market participants. Therefore, accurate electricity forecasting is a key issue for both market participants and market operators in the wholesale electricity market. This report takes a look at the general trend of LMP and its correlation with other time-series data, such as load, temperature, and fuel mix. This works can serve as a data preprocessing for performing LMP forecasting using machine learning methods in the future.
 
+##
+In this report, we analyze data from PJM of three years (7/1/2018 00:00 to 5/31/2021 23:59). The data is available to the public. The collected data include:
+
+Target:  
+- DA LMP: https://dataminer2.pjm.com/feed/rt_da_monthly_lmps, node: 1(PJM RTO)  
+
+We select the following accomapying data sets to assist our understanding of LMP:  
+- DA_load: https://dataminer2.pjm.com/feed/hrl_load_metered, Region: RTO
+- DA_wind: https://dataminer2.pjm.com/feed/wind_gen , area: RTO
+- DA_temperature: https://dataminer2.pjm.com/feed/da_tempset 
+- fuel_type: https://dataminer2.pjm.com/feed/gen_by_fuel
+- outage: https://dataminer2.pjm.com/feed/gen_outages_by_type, region: PJM RTO
+
 ## Libraries used:
 
 Pandas, Matplotlib, seaborn, datetime.
